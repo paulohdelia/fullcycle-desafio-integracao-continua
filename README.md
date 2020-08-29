@@ -16,6 +16,9 @@ Este é o último desafio da semana Full Cycle em que o objetivo é usar o Githu
 
 Com o GitHub Actions criei uma pipeline que instala todas as depêndencias e depois roda os testes automatizados que vem com o Nest.js
 
+![](http://drive.google.com/uc?export=view&id=15KfRKD7DcnO0Pz_bz3G4z0uT4t0uF8D0)
+
+Configurações mostradas no GIF
 ```yml
 - name: Install dependencies
   run: npm install
@@ -30,11 +33,11 @@ Com o GitHub Actions criei uma pipeline que instala todas as depêndencias e dep
   run: npm run test:cov
 ```
 
-Com os testes funcionando, eu criei uma nova regra para as branchs.
+Após ter finalizado a configuração de CI parti para criar uma nova regra para as branchs
 
 Regras que usei:
   * Não pode commitar direto na master
   * Exigir que todo pull-request passe nos testes definidos com o Github Actions
   * Os administradores também estão sujeitos aos testes
 
-
+![](http://drive.google.com/uc?export=view&id=1ouqQHTCq8JrG0dbh7VEQxIUALdB5_BXi)
