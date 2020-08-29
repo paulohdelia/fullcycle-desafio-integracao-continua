@@ -33,7 +33,7 @@ Configurações mostradas no GIF
   run: npm run test:cov
 ```
 
-Após ter finalizado a configuração de CI parti para criar uma nova regra para as branchs
+Após ter finalizado a configuração de CI, parti para criar uma nova regra para as branchs
 
 Regras que usei:
   * Não pode commitar direto na master
@@ -41,3 +41,15 @@ Regras que usei:
   * Os administradores também estão sujeitos aos testes
 
 ![](http://drive.google.com/uc?export=view&id=1ouqQHTCq8JrG0dbh7VEQxIUALdB5_BXi)
+
+Com as regras de branch criada e a CI feita com o Github Actions, o repositório já está pronto e devidamente configurado
+
+Para testar, criei um arquivo novo em uma branch chamada **dev** e fiz pull-request. Como esperado, o pull-request precisou passar primeiro pelos testes para então ser liberado para fazer o merge na master
+
+![](http://drive.google.com/uc?export=view&id=1ZMlN8AkAtNEQVkw_PWAXR-NDKGwS0sNL)
+
+E por último testei a regra de não permitir pushs direto para master. 
+
+Primeiro criei um arquivo novo na master, fiz o commit e tentei dar o push. Logo de cara apareceu uma mensagem de erro dizendo que a branch master é uma branch protegida. Então todas as configurações funcionaram!
+
+![](http://drive.google.com/uc?export=view&id=1lvlPnQgYNolupxbF3V5cTWzxpOdEFZUP)
